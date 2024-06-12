@@ -26,4 +26,3 @@ bld/
 
 # manual cmake build ignores
 build/
-lib/

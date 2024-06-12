@@ -1,0 +1,42 @@
+############################## SLR SIMPLECONFIG ############################
+# this is a comment. [X] is a namespace. [X:Y] initializes X from Y
+# Namespace and parameter names are not case-sensitive
+# X=Y sets X to Y. Y may be a string, float, or list of 3 floats
+############################################################################
+
+[QuadControlParams] 
+
+UseIdealEstimator=1
+
+# Physical properties
+Mass = 0.5
+L = 0.17
+Ixx = 0.0023
+Iyy = 0.0023
+Izz = 0.0046
+kappa = 0.016
+minMotorThrust = .1
+maxMotorThrust = 4.5
+
+# Position control gains
+kpPosXY = 14 # Ref from controls project: 3
+kpPosZ = 12 # Ref from controls project: 4
+KiPosZ = 8 # Ref from controls project: 40
+
+# Velocity control gains
+kpVelXY = 5 # Ref from controls project: 9
+kpVelZ = 7 # Ref from controls project: 12
+
+# Angle control gains
+kpBank = 12 # Ref from controls project: 14
+kpYaw = 5 # Ref from controls project: 2
+
+# Angle rate gains
+kpPQR = 60, 60, 10 # Ref from controls project: 50,50,20
+
+# limits
+maxAscentRate = 5
+maxDescentRate = 2
+maxSpeedXY = 5
+maxHorizAccel = 12
+maxTiltAngle = .7
