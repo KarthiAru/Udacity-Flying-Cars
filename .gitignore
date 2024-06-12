@@ -33,3 +33,5 @@
 
 .DS_Store
 **/lib/
+**/.ipynb_checkpoints
+**/__pycache__
